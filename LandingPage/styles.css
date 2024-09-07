@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+/*General styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+/*body styling*/
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.4;
+    background-color: #000000;
+    color: #fff;
+    
+}
+
+/* Header styling */
+header {
+    padding: 15px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    background: transparent;
+}
+
+/* Navbar */
+.navbar {
+    list-style: none;
+    display: flex;
+}
+
+.navbar li {
+    margin: 0 15px;
+}
+
+.navbar a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+    
+}
+
+.navbar a:after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: hsl(48, 100%, 50%);
+    left: 0;
+    bottom: -5px;
+    transition: width 0.2s;
+}
+
+.navbar a:hover:after {
+    width: 100%;
+}
+
+.navbar a.home-active:after {
+    width: 100%;
+}
+/*button*/
+
+.btn {
+    background-color: hsl(48, 100%, 50%);
+    color: black;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    
+}
+
+.btn:hover {
+    background-color: hsl(58, 100%, 50%);
+}
+
+/* Home Section */
+.home {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+    padding-right: 50px;
+}
+
+.home img {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.home-text {
+    z-index: 2;
+    max-width: 500px;
+    margin-right: 80px;
+}
+
+.home-text span {
+    display: block;
+    font-size: 18px; 
+    margin-bottom: 8px;
+    color: #fff;
+}
+
+.home-text h1 {
+    font-size: 40px; 
+    margin-bottom: 15px;
+    color: #fff;
+}
+
+/* Movies and upcming Movies  */
+.movies, .coming {
+    padding: 20px 0; 
+    text-align: center;
+}
+
+.movies h2, .coming h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    border-bottom: 2px solid hsl(48, 100%, 50%);
+    ; 
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.movies-container {
+    max-width:fit-content;
+    margin-right: auto;
+    margin-left: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+/* movie boxes*/
+.box {
+ 
+    border-radius: 5px;
+    overflow: hidden;
+    width: 220px;
+    text-align: start;
+    transition: margin-top 0.3s;
+    
+}
+
+.box:hover {
+    margin-top: -10px;
+}
+
+.box img {
+    width: 100%;
+    display: block;
+    height: 300px;
+    object-fit: cover;
+    
+}
+
+.box h3 {
+    padding: 10px; 
+    font-size: 0.9rem; 
+    font-weight: 500;
+    color: #fff;
+}
+
+/*Footer styling*/
+.footer {
+    color: #fff;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 20px;
+}
