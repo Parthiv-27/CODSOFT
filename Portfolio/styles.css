@@ -1,0 +1,268 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+/*General styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+/*body styling*/
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #000;
+    color: #fff;
+    line-height: 1.6;
+}
+
+/* Header styling */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    background:  #111;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    list-style: none;
+}
+
+.navbar li {
+    margin: 0 15px;
+}
+
+.navbar a {
+    color: #fff;
+    font-size: 18px;
+    position: relative;
+    text-decoration: none;
+}
+
+.navbar a:after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: hsl(48, 100%, 50%);;
+    left: 0;
+    bottom: -5px;
+    transition: width 0.2s;
+}
+
+.navbar a:hover:after {
+    width: 100%;
+}
+
+.navbar a.home-active:after {
+    width: 100%;
+}
+
+
+/* Home Section */
+.home {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 20px;
+}
+
+.home img {
+    position: absolute;
+    right: 220px;
+    bottom: 150px;
+    width: 500px;
+    filter: drop-shadow(0px 4px 10px rgba(243, 243, 243, 0.5));
+}
+
+.home-content {
+    text-align: start;
+    margin-left: 80px;
+}
+
+.home-content h1 {
+    font-size: 36px;
+    margin-bottom: 15px;
+}
+
+.home-content span {
+    color:hsl(48, 100%, 50%);
+}
+
+/*button styling*/
+.btn {
+    background-color: hsl(48, 100%, 50%);
+    padding: 10px 20px;
+    color: #000;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.btn:hover {
+    background-color: hsl(58, 100%, 50%);
+}
+
+/* about Section */
+.about {
+    padding: 50px 0;
+    text-align: center;
+}
+
+.about h2, .contact h2, .skills h2, .project h2{
+    font-size: 28px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    border-bottom: 2px solid hsl(48, 100%, 50%); 
+    display: inline-block;
+    padding-bottom: 5px;
+}
+.about-container {
+    display: flex;
+    align-items: center;
+    text-align: left;
+    justify-content: center;
+    gap: 40px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+.about-container p {
+    font-size: 18px;
+    line-height: 1.6;
+    max-width: 700px; 
+    
+}
+
+.about-container img {
+    width: 290px;
+    filter: drop-shadow(0px 4px 10px rgba(243, 243, 243, 0.5));
+
+    
+}
+
+/* Skills Section */
+.skills {
+    padding: 20px 0;
+    text-align: center;
+}
+
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.skill {
+    width: 200px;
+}
+
+.skill-bar {
+    width: 100%;
+    background: #333;
+    border-radius: 5px;
+}
+
+.skill-bar span {
+    display: block;
+    height: 10px;
+    background: #ffcc00;
+    border-radius: 5px;
+}
+
+
+/* Project Section */
+.project {
+    padding: 50px 0; 
+    text-align: center; 
+    
+}
+
+.project-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: space-between;
+    gap: 1.5rem;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.project-box {
+    background-color: #1a1a1a; 
+    padding: 20px;
+    border-radius: 10px;
+    text-align: left;
+    transition: margin-top 0.3s;
+}
+
+.project-box:hover {
+    margin-top: -10px;
+}
+
+.project-box h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.project-box p {
+    font-size: 16px;
+    color: rgb(204, 204, 204);
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+.project-box .btn {
+    background-color: hsl(48, 100%, 50%);
+    color: black;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color ;
+}
+
+.project-box .btn:hover {
+    background-color:  hsl(58, 100%, 50%);
+}
+
+
+
+/* contact Section */
+.contact {
+    padding: 20px;
+    text-align: center;
+    background-color: #1a1a1a;
+    color: #fff;
+}
+
+.contact-details p {
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.contact a {
+    color: yellow;
+    text-decoration: none;
+}
+
+.contact a:hover {
+    text-decoration: underline;
+}
+
+
+/*Footer styling*/
+footer {
+    background-color: #111;
+    padding: 20px;
+    text-align: center;
+    color: #fff;
+}
